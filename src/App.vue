@@ -6,7 +6,13 @@ import { RouterLink, RouterView } from "vue-router";
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/fasilitas">fasilitas</RouterLink>
+      <RouterLink to="/hiburan">hiburan</RouterLink>
+      <RouterLink to="/pesan-tiket">pesan-tiket</RouterLink>
+      <RouterLink to="/tukar-kupon">tukar-kupon</RouterLink>
+      <RouterLink to="/hubungi-kami">hubungi-kami</RouterLink>
+      <RouterLink to="/daftar">daftar</RouterLink>
+      <RouterLink to="/masuk">masuk</RouterLink>
     </nav>
   </header>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-2">
     <h1>home</h1>
     <div class="dropdown">
       <button

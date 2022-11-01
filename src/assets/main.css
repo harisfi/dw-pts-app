@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  --bs-nav-link-font-weight: 500;
+  --bs-nav-link-color: var(--bs-gray-100)
+}
+
+.fw-normal {
+  font-weight: 500 !important;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}

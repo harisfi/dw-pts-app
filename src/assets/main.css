@@ -11,10 +11,10 @@ body {
   --bs-nav-link-color: var(--bs-gray-100)
 }
 
-.fw-normal {
-  font-weight: 500 !important;
+.fw-600 {
+  font-weight: 600 !important;
 }
 
-.nav-link.active {
-  font-weight: 600;
+.w-fit {
+  width: fit-content;
 }

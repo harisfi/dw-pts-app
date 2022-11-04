@@ -1,3 +1,33 @@
+<script setup>
+import imgFasilitas from "@/assets/k-fasilitas.png";
+import imgHiburan from "@/assets/k-hiburan.png";
+import imgAkses from "@/assets/k-akses.png";
+import imgAnak from "@/assets/k-anak.png";
+
+const adventages = [
+  {
+    image: imgFasilitas,
+    title: "Fasilitas Lengkap",
+    description: "Mollitia distinctio hic unde dolor eum. Mollitia velit et possimus qui molestiae.",
+  },
+  {
+    image: imgHiburan,
+    title: "Beragam Hiburan",
+    description: "Vel impedit saepe aut. Quaerat explicabo a quo nihil. Et quae minima.",
+  },
+  {
+    image: imgAkses,
+    title: "Akses Mudah",
+    description: "Suscipit tempore ut est velit et quisquam. Aut a voluptatum est.",
+  },
+  {
+    image: imgAnak,
+    title: "Ramah Anak",
+    description: "Dolorem tenetur ratione velit earum expedita omnis. Excepturi quas sed.",
+  },
+];
+</script>
+
 <template>
   <div class="position-absolute top-0 left-0 h-100 w-100">
     <section aria-label="hero" class="hero position-relative">
@@ -37,10 +67,44 @@
       </div>
       <div class="overlay position-absolute top-0 left-0 h-100 w-100 z-1"></div>
     </section>
+    <section aria-label="keunggulan" class="bg-bluesea">
+      <div class="container-md">
+        <h2 class="text-center text-white py-5">
+          <div class="fs-1">Kelebihan</div>
+          <div>Pantai Teluk Sanjaya</div>
+        </h2>
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100"
+        >
+          <div v-for="(adv, idx) in adventages" :key="idx" class="mx-4">
+            <div class="w-fit mx-auto">
+              <img :src="adv.image" :alt="adv.title" />
+            </div>
+            <div class="text-center text-white">
+              <h4 class="py-2">{{ adv.title }}</h4>
+              <p>{{ adv.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <style scoped>
+h1 {
+  font-size: 2.7rem;
+}
+h1 div:first-child {
+  font-weight: 400;
+}
+h1 div:last-child {
+  font-weight: 600;
+}
+
+.bg-bluesea {
+  background-color: #0099ff;
+}
 .z-1 {
   z-index: 1;
 }
@@ -52,15 +116,6 @@
 }
 .overlay {
   background: rgba(0, 0, 0, 40%);
-}
-h1 {
-  font-size: 2.7rem;
-}
-h1 div:first-child {
-  font-weight: 400;
-}
-h1 div:last-child {
-  font-weight: 600;
 }
 
 @media (min-width: 768px) {

@@ -9,9 +9,12 @@ const expandNavbar = ref(false);
 const showNavbar = ref(true);
 
 router.afterEach((to) => {
+  window.scrollTo(0, 0);
+
   isHome.value = to.fullPath === "/";
-  toggleNavbar();
   expandNavbar.value = false;
+
+  toggleNavbar();
 });
 
 function toggleOffcanvas() {

@@ -8,22 +8,26 @@ const adventages = [
   {
     image: imgFasilitas,
     title: "Fasilitas Lengkap",
-    description: "Mollitia distinctio hic unde dolor eum. Mollitia velit et possimus qui molestiae.",
+    description:
+      "Kami memiliki fasilitas yang lengkap untuk kenyamanan wisatawan.",
   },
   {
     image: imgHiburan,
     title: "Beragam Hiburan",
-    description: "Vel impedit saepe aut. Quaerat explicabo a quo nihil. Et quae minima.",
+    description:
+      "Beragam hiburan menarik tersedia di sini untuk menghibur para wisatawan.",
   },
   {
     image: imgAkses,
     title: "Akses Mudah",
-    description: "Suscipit tempore ut est velit et quisquam. Aut a voluptatum est.",
+    description:
+      "Akses yang mudah serta lokasi yang strategis merupakan keunggulan kami.",
   },
   {
     image: imgAnak,
     title: "Ramah Anak",
-    description: "Dolorem tenetur ratione velit earum expedita omnis. Excepturi quas sed.",
+    description:
+      "Anda bisa mengajak keluarga Anda untuk melepas penat sehari-hari.",
   },
 ];
 </script>
@@ -44,12 +48,14 @@ const adventages = [
                 <div>Selamat Datang di</div>
                 <div>Pantai Teluk Sanjaya</div>
               </h1>
-              <p class="max-w-md-75">
-                Voluptates fugit enim sit rerum totam ex praesentium molestiae.
-                Sed tempore explicabo necessitatibus voluptates praesentium
-                necessitatibus vel id enim. Maxime ut quis esse ut omnis. Non
-                qui et exercitationem tempora id maxime. Dolor laborum
-                dignissimos sed quidem praesentium. Modi aut aperiam.
+              <p class="max-w-md-55">
+                Pantai Teluk Sanjaya memiliki fasilitas yang lengkap serta
+                berbagai hiburan menarik yang sayang untuk dilewatkan. Pantai
+                Teluk Sanjaya juga memiliki lokasi yang strategis serta memiliki
+                akses yang mudah untuk dijangkau.
+                <br>
+                Yuk! menangkan liburanmu
+                bersama kami di Pantai Teluk Sanjaya.
               </p>
               <button class="btn btn-lg btn-primary w-fit shadow">
                 Mulai Jelajahi
@@ -82,7 +88,7 @@ const adventages = [
             </div>
             <div class="text-center text-white">
               <h4 class="py-2">{{ adv.title }}</h4>
-              <p>{{ adv.description }}</p>
+              <p class="h-5">{{ adv.description }}</p>
             </div>
           </div>
         </div>
@@ -105,6 +111,12 @@ h1 div:last-child {
 .bg-bluesea {
   background-color: #0099ff;
 }
+.h-5 {
+  height: 5rem;
+}
+.overlay {
+  background: rgba(0, 0, 0, 40%);
+}
 .z-1 {
   z-index: 1;
 }
@@ -114,16 +126,13 @@ h1 div:last-child {
 .z-3 {
   z-index: 3;
 }
-.overlay {
-  background: rgba(0, 0, 0, 40%);
-}
 
 @media (min-width: 768px) {
   h1 {
     font-size: 4rem;
   }
-  .max-w-md-75 {
-    max-width: 75%;
+  .max-w-md-55 {
+    max-width: 55%;
   }
   .w-md-100 {
     width: 100%;

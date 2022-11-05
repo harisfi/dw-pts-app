@@ -1,8 +1,8 @@
 <script setup>
-import imgFasilitas from "@/assets/k-fasilitas.png";
-import imgHiburan from "@/assets/k-hiburan.png";
-import imgAkses from "@/assets/k-akses.png";
-import imgAnak from "@/assets/k-anak.png";
+import imgFasilitas from "@/assets/home/k-fasilitas.png";
+import imgHiburan from "@/assets/home/k-hiburan.png";
+import imgAkses from "@/assets/home/k-akses.png";
+import imgAnak from "@/assets/home/k-anak.png";
 
 const adventages = [
   {
@@ -35,11 +35,7 @@ const adventages = [
 <template>
   <div class="position-absolute top-0 left-0 h-100 w-100">
     <section aria-label="hero" class="hero position-relative">
-      <img
-        src="@/assets/bg.png"
-        alt="background"
-        class="img-responsive w-md-100"
-      />
+      <img src="@/assets/home/bg.png" alt="background" class="w-md-100" />
       <div class="position-absolute top-0 left-0 h-100 w-100 z-3">
         <div class="container-md h-100">
           <div class="d-flex flex-column justify-content-center h-100">
@@ -53,9 +49,8 @@ const adventages = [
                 berbagai hiburan menarik yang sayang untuk dilewatkan. Pantai
                 Teluk Sanjaya juga memiliki lokasi yang strategis serta memiliki
                 akses yang mudah untuk dijangkau.
-                <br>
-                Yuk! menangkan liburanmu
-                bersama kami di Pantai Teluk Sanjaya.
+                <br />
+                Yuk! menangkan liburanmu bersama kami di Pantai Teluk Sanjaya.
               </p>
               <button class="btn btn-lg btn-primary w-fit shadow">
                 Mulai Jelajahi
@@ -66,7 +61,7 @@ const adventages = [
       </div>
       <div class="position-absolute z-2 bottom-0 left-0 w-100">
         <img
-          src="@/assets/wave-hero.png"
+          src="@/assets/home/wave-hero.png"
           alt="wave-hero"
           class="img-responsive w-100"
         />
@@ -114,18 +109,6 @@ h1 div:last-child {
 .h-5 {
   height: 5rem;
 }
-.overlay {
-  background: rgba(0, 0, 0, 40%);
-}
-.z-1 {
-  z-index: 1;
-}
-.z-2 {
-  z-index: 2;
-}
-.z-3 {
-  z-index: 3;
-}
 
 @media (min-width: 768px) {
   h1 {
@@ -133,9 +116,6 @@ h1 div:last-child {
   }
   .max-w-md-55 {
     max-width: 55%;
-  }
-  .w-md-100 {
-    width: 100%;
   }
 }
 </style>

@@ -11,10 +11,30 @@ body {
   --bs-nav-link-color: var(--bs-gray-100)
 }
 
+.fs-7 {
+  font-size: .9rem !important;
+}
 .fw-600 {
   font-weight: 600 !important;
 }
-
+.overlay {
+  background: rgba(0, 0, 0, 40%);
+}
 .w-fit {
   width: fit-content;
+}
+.z-1 {
+  z-index: 1;
+}
+.z-2 {
+  z-index: 2;
+}
+.z-3 {
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .w-md-100 {
+    width: 100%;
+  }
 }

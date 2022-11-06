@@ -1,4 +1,5 @@
 <script setup>
+import Footer from "@/components/Footer.vue";
 import imgTarian from "@/assets/entertainments/tarian.png";
 import imgSnorkeling from "@/assets/entertainments/snorkeling.png";
 import imgJetski from "@/assets/entertainments/jetski.png";
@@ -90,4 +91,5 @@ const entertainments = [
       </div>
     </section>
   </div>
+  <Footer />
 </template>

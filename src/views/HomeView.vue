@@ -1,4 +1,5 @@
 <script setup>
+import Footer from "@/components/Footer.vue";
 import imgFasilitas from "@/assets/home/k-fasilitas.png";
 import imgHiburan from "@/assets/home/k-hiburan.png";
 import imgAkses from "@/assets/home/k-akses.png";
@@ -89,6 +90,7 @@ const adventages = [
         </div>
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
@@ -103,9 +105,6 @@ h1 div:last-child {
   font-weight: 600;
 }
 
-.bg-bluesea {
-  background-color: #0099ff;
-}
 .h-5 {
   height: 5rem;
 }

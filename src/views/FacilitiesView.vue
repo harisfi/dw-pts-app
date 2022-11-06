@@ -1,4 +1,5 @@
 <script setup>
+import Footer from "@/components/Footer.vue";
 import imgPenginapan from "@/assets/facilities/penginapan.png";
 import imgFoodCourt from "@/assets/facilities/food-court.png";
 import imgParkir from "@/assets/facilities/tempat-parkir.png";
@@ -90,6 +91,7 @@ const facilities = [
       </div>
     </section>
   </div>
+  <Footer />
 </template>
 
 <style scoped></style>

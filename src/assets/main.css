@@ -11,8 +11,14 @@ body {
   --bs-nav-link-color: var(--bs-gray-100)
 }
 
+.bg-bluesea {
+  background-color: #0099ff;
+}
 .fs-7 {
   font-size: .9rem !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
 }
 .fw-600 {
   font-weight: 600 !important;

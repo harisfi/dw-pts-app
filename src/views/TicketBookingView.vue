@@ -1,20 +1,37 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
+import { reactive, ref } from "@vue/reactivity";
 
-const tickets = [
-  {
-    category: 'Dewasa',
-    price: 123456,
-    qty: 0,
-    subtotal: 0,
-  },
-  {
-    category: 'Anak-anak',
-    price: 123456,
-    qty: 0,
-    subtotal: 0,
-  },
-];
+const tickets = reactive({
+  value: [
+    {
+      category: "Dewasa",
+      price: 20000,
+      qty: 0,
+      subtotal: 0,
+    },
+    {
+      category: "Anak-anak",
+      price: 10000,
+      qty: 0,
+      subtotal: 0,
+    },
+  ],
+});
+const totalPrice = ref(0);
+
+function calcPrice() {
+  totalPrice.value = 0;
+
+  tickets.value = tickets.value.map((t) => {
+    const subtotal = t.price * t.qty;
+    totalPrice.value += subtotal;
+    return {
+      ...t,
+      subtotal,
+    };
+  });
+}
 </script>
 
 <template>
@@ -30,21 +47,32 @@ const tickets = [
         </tr>
       </thead>
       <tbody>
-        <tr v-for="t in tickets" :key="t.category">
-          <td>{{t.category}}</td>
-          <td>{{t.price}}</td>
-          <td>{{t.qty}}</td>
-          <td>{{t.subtotal}}</td>
+        <tr v-for="t in tickets.value" :key="t.category">
+          <td class="align-middle">{{ t.category }}</td>
+          <td class="align-middle">{{ t.price }}</td>
+          <td class="w-25">
+            <input
+              class="form-control w-100"
+              type="number"
+              placeholder="0"
+              min="0"
+              v-model="t.qty"
+              @change="calcPrice"
+            />
+          </td>
+          <td class="align-middle">{{ t.subtotal }}</td>
         </tr>
         <tr>
           <td colspan="2"></td>
           <td class="fw-bold">Total</td>
-          <td class="fw-bold">123</td>
+          <td class="fw-bold">{{ totalPrice }}</td>
         </tr>
       </tbody>
     </table>
     <div class="text-end">
-      <button class="btn btn-primary">Pesan Sekarang</button>
+      <button :disabled="totalPrice === 0" class="btn btn-primary">
+        Pesan Sekarang
+      </button>
     </div>
   </div>
   <Footer />

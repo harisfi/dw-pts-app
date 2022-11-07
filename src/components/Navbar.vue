@@ -9,7 +9,9 @@ const expandNavbar = ref(false);
 const showNavbar = ref(true);
 
 router.afterEach((to) => {
-  window.scrollTo(0, 0);
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 128);
 
   isHome.value = to.fullPath === "/";
   expandNavbar.value = false;

@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router";
 
 <template>
   <footer>
-    <img src="@/assets/wave-footer.svg" alt="footer" />
+    <img src="@/assets/images/wave-footer.svg" alt="footer" />
     <div class="content fw-500 bg-bluesea">
       <div class="container-md text-white">
         <div class="text-center">
@@ -19,8 +19,8 @@ import { RouterLink } from "vue-router";
       <div class="container-fluid text-white mt-5 pt-5 pb-2">
         <div class="d-flex flex-column flex-md-row justify-content-around mx-md-5 px-md-5 w-100">
           <div class="d-flex justify-content-center align-items-center me-md-4">
-            <img src="@/assets/logo.png" alt="logo" height="80" class="me-3">
-            <img src="@/assets/wonderful-id.png" alt="logo" height="80">
+            <img src="@/assets/images/logo.png" alt="logo" height="80" class="me-3">
+            <img src="@/assets/images/wonderful-id.png" alt="logo" height="80">
           </div>
           <div class="row row-cols-2 row-cols-md-4 ms-0 mt-5 mt-md-0 w-100">
             <div class="col mb-4 mb-md-0">

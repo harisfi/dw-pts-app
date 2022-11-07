@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Tarian Lokal",
+    "description": "Anda dapat menyaksikkan beragam tarian lokal yang diselenggarakan pada acara atau hari-hari tertentu.",
+    "image": "/assets/images/entertainments/tarian.png",
+    "stars": 5
+  },
+  {
+    "name": "Snorkeling",
+    "description": "Laut yang masih alami dapat Anda nikmati dengan snorkeling dan didampingi oleh pendamping kami yang berpengalaman.",
+    "image": "/assets/images/entertainments/snorkeling.png",
+    "stars": 5
+  },
+  {
+    "name": "Jetski",
+    "description": "Kami menyediakan jetski untuk anda yang memiliki semangat berlibur di laut dan juga suka memacu andrenalin.",
+    "image": "/assets/images/entertainments/jetski.png",
+    "stars": 5
+  },
+  {
+    "name": "Banana Boat",
+    "description": "Banana Boat cocok untuk Anda yang ingin menikmati laut bersama teman-teman Anda atau keluarga Anda.",
+    "image": "/assets/images/entertainments/banana-boat.png",
+    "stars": 5
+  },
+  {
+    "name": "Selancar",
+    "description": "Pantai kami memiliki ombak yang cocok untuk Anda yang hobi berselancar, kami juga menyediakan perlengkapannya untuk Anda.",
+    "image": "/assets/images/entertainments/selancar.png",
+    "stars": 5
+  },
+  {
+    "name": "Musik",
+    "description": "Musik merupakan hiburan yang cocok untuk Anda yang ingin bersantai dan melepas kepenatan pekerjaan sehari-hari.",
+    "image": "/assets/images/entertainments/musik.png",
+    "stars": 5
+  }
+]

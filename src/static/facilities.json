@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Penginapan",
+    "description": "Kami menyediakan penginapan terbaik yang menawarkan tempat yang aman dan nyaman untuk wisatawan.",
+    "image": "/assets/images/facilities/penginapan.png",
+    "stars": 5
+  },
+  {
+    "name": "Food Court",
+    "description": "Beragam makanan lokal  dengan rempah-rempah yang dapat menggugah selera makan Anda.",
+    "image": "/assets/images/facilities/food-court.png",
+    "stars": 5
+  },
+  {
+    "name": "Tempat Parkir",
+    "description": "Tempat parkir yang luas serta aman untuk kendaraan pribadi seperti mobil dan sepeda motor dan juga untuk bis pariwisata.",
+    "image": "/assets/images/facilities/tempat-parkir.png",
+    "stars": 5
+  },
+  {
+    "name": "Toilet Umum",
+    "description": "Toilet umum untuk pria dan wanita yang selalu kami jaga kebersihan dan keamanannya.",
+    "image": "/assets/images/facilities/toilet-umum.png",
+    "stars": 5
+  },
+  {
+    "name": "Kafe",
+    "description": "Kami menyediakan fasilitas kafe untuk wisatawan yang ingin mencicipi kopi buatan lokal yang memiliki cita rasa tersendiri.",
+    "image": "/assets/images/facilities/kafe.png",
+    "stars": 5
+  },
+  {
+    "name": "Toko Oleh-oleh",
+    "description": "Terdapat berbagai macam oleh-oleh serta kerajinan buatan masyarakat lokal yang dapat anda beli di toko oleh-oleh.",
+    "image": "/assets/images/facilities/toko-oleh-oleh.png",
+    "stars": 5
+  }
+]

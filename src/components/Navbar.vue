@@ -54,7 +54,7 @@ onBeforeMount(() => {
     <div class="container-md">
       <RouterLink to="/" class="navbar-brand">
         <img
-          src="@/assets/logo.png"
+          src="@/assets/images/logo.png"
           alt="Logo Pantai Teluk Sanjaya"
           width="50"
           height="40"

@@ -1,42 +1,12 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
-import imgFasilitas from "@/assets/home/k-fasilitas.png";
-import imgHiburan from "@/assets/home/k-hiburan.png";
-import imgAkses from "@/assets/home/k-akses.png";
-import imgAnak from "@/assets/home/k-anak.png";
-
-const adventages = [
-  {
-    image: imgFasilitas,
-    title: "Fasilitas Lengkap",
-    description:
-      "Kami memiliki fasilitas yang lengkap untuk kenyamanan wisatawan.",
-  },
-  {
-    image: imgHiburan,
-    title: "Beragam Hiburan",
-    description:
-      "Beragam hiburan menarik tersedia di sini untuk menghibur para wisatawan.",
-  },
-  {
-    image: imgAkses,
-    title: "Akses Mudah",
-    description:
-      "Akses yang mudah serta lokasi yang strategis merupakan keunggulan kami.",
-  },
-  {
-    image: imgAnak,
-    title: "Ramah Anak",
-    description:
-      "Anda bisa mengajak keluarga Anda untuk melepas penat sehari-hari.",
-  },
-];
+import adventages from "@/static/adventages.json";
 </script>
 
 <template>
   <div class="position-absolute top-0 left-0 h-100 w-100">
     <section aria-label="hero" class="hero position-relative">
-      <img src="@/assets/home/bg.png" alt="background" class="w-md-100" />
+      <img src="@/assets/images/hero-home.png" alt="background" class="w-md-100" />
       <div class="position-absolute top-0 left-0 h-100 w-100 z-3">
         <div class="container-md h-100">
           <div class="d-flex flex-column justify-content-center h-100">
@@ -62,7 +32,7 @@ const adventages = [
       </div>
       <div class="position-absolute z-2 bottom-0 left-0 w-100">
         <img
-          src="@/assets/home/wave-hero.png"
+          src="@/assets/images/wave-hero.png"
           alt="wave-hero"
           class="img-responsive w-100"
         />

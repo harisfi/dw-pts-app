@@ -6,7 +6,11 @@ import adventages from "@/static/adventages.json";
 <template>
   <div class="position-absolute top-0 left-0 h-100 w-100">
     <section aria-label="hero" class="hero position-relative">
-      <img src="@/assets/images/hero-home.png" alt="background" class="w-md-100" />
+      <img
+        src="@/assets/images/hero-home.png"
+        alt="background"
+        class="w-md-100"
+      />
       <div class="position-absolute top-0 left-0 h-100 w-100 z-3">
         <div class="container-md h-100">
           <div class="d-flex flex-column justify-content-center h-100">
@@ -34,7 +38,7 @@ import adventages from "@/static/adventages.json";
         <img
           src="@/assets/images/wave-hero.png"
           alt="wave-hero"
-          class="img-responsive w-100"
+          class="w-100"
         />
       </div>
       <div class="overlay position-absolute top-0 left-0 h-100 w-100 z-1"></div>
@@ -58,6 +62,44 @@ import adventages from "@/static/adventages.json";
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section aria-label="lokasi" class="position-relative">
+      <div class="position-relative z-2 top-0 left-0 w-100">
+        <img
+          src="@/assets/images/wave-location.png"
+          alt="wave-location"
+          class="w-100"
+        />
+      </div>
+      <div class="position-relative container-md z-2">
+        <div class="row row-cols-1 row-cols-md-2 align-items-center">
+          <div class="col text-center text-md-start">
+            <h2 class="display-5 fw-semibold">
+              Lokasi<span class="d-none d-md-inline"> ⟶</span>
+            </h2>
+            <h3 class="fs-2 fw-semibold">Pantai Teluk Sanjaya</h3>
+            <p class="max-w-md-90">
+              Dengan berlokasi di dekat perkotaan dan pemukiman warga, Pantai
+              Teluk Sanjaya memiliki akses yang mudah berupa jalan raya yang
+              dapat Anda tuju dengan mudah dan dalam waktu yang tidak lama.
+            </p>
+          </div>
+          <div class="col">
+            <div class="ratio ratio-1x1">
+              <iframe
+                src="https://maps.google.com/maps?q=kenjeran&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute top-0 left-0 w-100 h-100 z-1">
+        <img src="@/assets/images/shapes.png" alt="shapes" class="w-100" />
       </div>
     </section>
     <Footer />
@@ -85,6 +127,9 @@ h1 div:last-child {
   }
   .max-w-md-55 {
     max-width: 55%;
+  }
+  .max-w-md-90 {
+    max-width: 90%;
   }
 }
 </style>

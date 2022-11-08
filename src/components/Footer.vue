@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <footer>
+  <footer class="position-relative z-3">
     <img src="@/assets/images/wave-footer.svg" alt="footer" />
     <div class="content fw-500 bg-bluesea">
       <div class="container-md text-white">

@@ -1,6 +1,7 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
 import { reactive, ref } from "@vue/reactivity";
+import { convertToRupiah } from "@/utils/formatter";
 
 const tickets = reactive({
   value: [
@@ -49,7 +50,7 @@ function calcPrice() {
       <tbody>
         <tr v-for="t in tickets.value" :key="t.category">
           <td class="align-middle">{{ t.category }}</td>
-          <td class="align-middle">{{ t.price }}</td>
+          <td class="align-middle">{{ convertToRupiah(t.price) }}</td>
           <td class="w-25">
             <input
               class="form-control w-100"
@@ -60,12 +61,12 @@ function calcPrice() {
               @change="calcPrice"
             />
           </td>
-          <td class="align-middle">{{ t.subtotal }}</td>
+          <td class="align-middle">{{ convertToRupiah(t.subtotal) }}</td>
         </tr>
         <tr>
           <td colspan="2"></td>
           <td class="fw-bold">Total</td>
-          <td class="fw-bold">{{ totalPrice }}</td>
+          <td class="fw-bold">{{ convertToRupiah(totalPrice) }}</td>
         </tr>
       </tbody>
     </table>

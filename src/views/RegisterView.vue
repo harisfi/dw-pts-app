@@ -1,5 +1,29 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
+import { useRouter } from "vue-router";
+import bootstrap from "bootstrap/dist/js/bootstrap";
+import { onMounted } from "@vue/runtime-core";
+
+const router = useRouter();
+let myModal;
+
+function handleSubmit(event) {
+  event.preventDefault();
+  showModal();
+}
+
+function showModal() {
+  myModal.show();
+}
+
+function redirectToLoginPage() {
+  myModal.hide();
+  router.push("/masuk");
+}
+
+onMounted(() => {
+  myModal = new bootstrap.Modal("#modalSuccess");
+})
 </script>
 
 <template>
@@ -17,7 +41,7 @@ import Footer from "@/components/Footer.vue";
           <h1 class="h2 fw-semibold">Selamat Datang!</h1>
           <h5>Silakan daftar untuk melanjutkan</h5>
         </div>
-        <form class="mt-5 mb-3">
+        <form @submit="handleSubmit" class="mt-5 mb-3">
           <div class="mb-3">
             <label for="name" class="form-label">Nama</label>
             <input
@@ -54,6 +78,7 @@ import Footer from "@/components/Footer.vue";
         </form>
         <div class="mb-3 text-center">atau</div>
         <button
+          @click="showModal"
           class="btn btn-light d-flex flex-column flex-md-row justify-content-center align-items-center shadow w-100 mb-3"
         >
           <img
@@ -64,6 +89,7 @@ import Footer from "@/components/Footer.vue";
           Daftar Menggunakan Akun Google
         </button>
         <button
+          @click="showModal"
           class="btn btn-light d-flex flex-column flex-md-row justify-content-center align-items-center shadow w-100"
         >
           <img
@@ -77,4 +103,33 @@ import Footer from "@/components/Footer.vue";
     </div>
   </div>
   <Footer />
+  <div
+    class="modal fade"
+    id="modalSuccess"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Berhasil</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">Silakan masuk untuk melanjutkan</div>
+        <div class="modal-footer">
+          <button @click="redirectToLoginPage" class="btn btn-primary">
+            Masuk
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

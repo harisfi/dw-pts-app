@@ -76,5 +76,5 @@ function calcPrice() {
       </button>
     </div>
   </div>
-  <Footer in-ticket-booking-page="true" />
+  <Footer :in-ticket-booking-page="true" />
 </template>

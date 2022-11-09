@@ -7,7 +7,7 @@ import adventages from "@/static/adventages.json";
   <div class="position-absolute top-0 left-0 h-100 w-100">
     <section aria-label="hero" class="hero position-relative">
       <img
-        src="@/assets/images/hero-home.png"
+        src="@/assets/images/hero-home.webp"
         alt="background"
         class="w-md-100"
       />

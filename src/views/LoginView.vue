@@ -29,7 +29,7 @@ function login() {
         <div
           class="d-none d-md-flex justify-content-center align-items-center h-100"
         >
-          <img src="@/assets/images/beach.png" alt="beach" class="img-fluid" />
+          <img src="@/assets/images/beach.webp" alt="beach" class="img-fluid" />
         </div>
       </div>
       <div class="col px-md-5">

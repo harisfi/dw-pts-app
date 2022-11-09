@@ -35,13 +35,13 @@ function logout() {
         <div class="d-flex flex-column flex-md-row justify-content-around mx-md-5 px-md-5 w-100">
           <div class="d-flex justify-content-center align-items-center me-md-4">
             <img
-              src="@/assets/images/logo.png"
+              src="@/assets/images/logo.webp"
               alt="logo"
               height="80"
               class="me-3"
             />
             <img
-              src="@/assets/images/wonderful-id.png"
+              src="@/assets/images/wonderful-id.webp"
               alt="logo"
               height="80"
             />

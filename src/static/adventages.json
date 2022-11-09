@@ -2,21 +2,21 @@
   {
     "title": "Fasilitas Lengkap",
     "description": "Kami memiliki fasilitas yang lengkap untuk kenyamanan wisatawan.",
-    "image": "/assets/images/home/fasilitas.png"
+    "image": "/assets/images/home/fasilitas.webp"
   },
   {
     "title": "Beragam Hiburan",
     "description": "Beragam hiburan menarik tersedia di sini untuk menghibur para wisatawan.",
-    "image": "/assets/images/home/hiburan.png"
+    "image": "/assets/images/home/hiburan.webp"
   },
   {
     "title": "Akses Mudah",
     "description": "Akses yang mudah serta lokasi yang strategis merupakan keunggulan kami.",
-    "image": "/assets/images/home/akses.png"
+    "image": "/assets/images/home/akses.webp"
   },
   {
     "title": "Ramah Anak",
     "description": "Anda bisa mengajak keluarga Anda untuk melepas penat sehari-hari.",
-    "image": "/assets/images/home/anak.png"
+    "image": "/assets/images/home/anak.webp"
   }
 ]

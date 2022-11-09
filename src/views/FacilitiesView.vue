@@ -6,7 +6,7 @@ import facilities from "@/static/facilities.json";
 <template>
   <div class="container-md mt-2">
     <section aria-label="hero" class="position-relative overflow-hidden mt-5">
-      <img src="@/assets/images/hero-facilities.png" alt="hero" class="w-md-100" />
+      <img src="@/assets/images/hero-facilities.webp" alt="hero" class="w-md-100" />
       <div class="position-absolute top-0 left-0 h-100 w-100 z-2">
         <div class="d-flex flex-column justify-content-center h-100">
           <div class="text-center text-white">

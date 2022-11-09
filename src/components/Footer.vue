@@ -1,6 +1,7 @@
 <script setup>
 import { toRefs } from "@vue/reactivity";
 import { RouterLink } from "vue-router";
+import { useAccountStore } from "@/stores/account";
 
 const props = defineProps({
   inTicketBookingPage: {
@@ -10,6 +11,12 @@ const props = defineProps({
 });
 
 const { inTicketBookingPage } = toRefs(props);
+const account = useAccountStore();
+
+function logout() {
+  account.logOut();
+  window.location = '/';
+}
 </script>
 
 <template>
@@ -66,12 +73,19 @@ const { inTicketBookingPage } = toRefs(props);
             </div>
             <div class="col">
               <div class="h5 mb-3">Akun</div>
-              <RouterLink to="/daftar" class="d-block link mb-1">
-                Daftar
-              </RouterLink>
-              <RouterLink to="/masuk" class="d-block link mb-1">
-                Masuk
-              </RouterLink>
+              <template v-if="account.loggedIn">
+                <a @click="logout" class="d-block link mb-1">
+                  Keluar
+                </a>
+              </template>
+              <template v-else>
+                <RouterLink to="/daftar" class="d-block link mb-1">
+                  Daftar
+                </RouterLink>
+                <RouterLink to="/masuk" class="d-block link mb-1">
+                  Masuk
+                </RouterLink>
+              </template>
             </div>
             <div class="col">
               <div class="h5 mb-3">Media Sosial</div>
@@ -99,6 +113,8 @@ const { inTicketBookingPage } = toRefs(props);
 .link {
   color: var(--bs-light);
   text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
 }
 .link:hover {
   text-decoration: underline;

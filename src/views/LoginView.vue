@@ -1,5 +1,25 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
+import { useAccountStore } from "@/stores/account";
+import { useRouter } from "vue-router";
+import bootstrap from "bootstrap/dist/js/bootstrap";
+
+const account = useAccountStore();
+const router = useRouter();
+
+function handleSubmit(event) {
+  event.preventDefault();
+  login();
+}
+
+function login() {
+  account.logIn();
+  const toast = new bootstrap.Toast("#toastSuccess");
+  toast.show();
+  setTimeout(() => {
+    window.location = '/';
+  }, 1250);
+}
 </script>
 
 <template>
@@ -17,7 +37,7 @@ import Footer from "@/components/Footer.vue";
           <h1 class="h2 fw-semibold">Selamat Datang!</h1>
           <h5>Silakan masuk untuk melanjutkan</h5>
         </div>
-        <form class="mt-5 mb-3">
+        <form @submit="handleSubmit" class="mt-5 mb-3">
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input
@@ -42,6 +62,7 @@ import Footer from "@/components/Footer.vue";
         </form>
         <div class="mb-3 text-center">atau</div>
         <button
+          @click="login"
           class="btn btn-light d-flex flex-column flex-md-row justify-content-center align-items-center shadow w-100 mb-3"
         >
           <img
@@ -52,6 +73,7 @@ import Footer from "@/components/Footer.vue";
           Masuk Menggunakan Akun Google
         </button>
         <button
+          @click="login"
           class="btn btn-light d-flex flex-column flex-md-row justify-content-center align-items-center shadow w-100"
         >
           <img
@@ -65,4 +87,24 @@ import Footer from "@/components/Footer.vue";
     </div>
   </div>
   <Footer />
+
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div
+      id="toastSuccess"
+      class="toast align-items-center text-bg-success border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Berhasil masuk</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
 </template>

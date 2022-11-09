@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+import pinia from "@/stores/store";
+import { useAccountStore } from "@/stores/account";
 
 const appTitle = "Pantai Teluk Sanjaya";
 
@@ -50,7 +52,18 @@ const router = createRouter({
   ],
 });
 
+const account = useAccountStore(pinia);
 router.beforeEach((to, _, next) => {
+  if (!account.loggedIn) {
+    if (to.path === "/pesan-tiket" || to.path === "/tukar-kupon") {
+      return next("/masuk");
+    }
+  } else {
+    if (to.path === "/masuk" || to.path === "/daftar") {
+      return next("/");
+    }
+  }
+
   document.title = `${to.name} - ${appTitle}`;
   next();
 });

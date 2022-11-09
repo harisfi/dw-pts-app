@@ -1,8 +1,10 @@
 <script setup>
 import { RouterLink, useRouter } from "vue-router";
 import { ref } from "@vue/reactivity";
+import { useAccountStore } from "@/stores/account";
 import { onBeforeMount } from "@vue/runtime-core";
 
+const account = useAccountStore();
 const router = useRouter();
 const isHome = ref(false);
 const expandNavbar = ref(false);
@@ -37,6 +39,11 @@ function toggleNavbar() {
     showNavbar.value = true;
     window.removeEventListener("scroll", doScroll);
   }
+}
+
+function logout() {
+  account.logOut();
+  window.location = '/';
 }
 
 onBeforeMount(() => {
@@ -113,7 +120,19 @@ onBeforeMount(() => {
             </RouterLink>
           </li>
         </ul>
-        <div class="d-flex">
+        <div v-if="account.loggedIn" class="d-flex">
+          <button
+            @click="logout"
+            :class="
+              'btn-nav btn fw-600 me-2' +
+              (expandNavbar ? ' w-100' : '') +
+              (showNavbar || expandNavbar ? ' btn-light' : ' btn-primary')
+            "
+          >
+            Keluar
+          </button>
+        </div>
+        <div v-else class="d-flex">
           <RouterLink
             to="/daftar"
             :class="

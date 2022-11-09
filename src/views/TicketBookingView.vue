@@ -1,8 +1,11 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
+import { useCouponStore } from "@/stores/coupon";
 import { reactive, ref } from "@vue/reactivity";
 import { convertToRupiah } from "@/utils/formatter";
+import bootstrap from "bootstrap/dist/js/bootstrap";
 
+const couponStore = useCouponStore();
 const tickets = reactive({
   value: [
     {
@@ -20,6 +23,7 @@ const tickets = reactive({
   ],
 });
 const totalPrice = ref(0);
+const couponsCount = ref(0);
 
 function calcPrice() {
   totalPrice.value = 0;
@@ -32,6 +36,20 @@ function calcPrice() {
       subtotal,
     };
   });
+}
+
+function bookNow() {
+  let qty = 0;
+
+  tickets.value.forEach((t) => (qty += t.qty));
+  couponsCount.value = Math.floor(qty / 2);
+
+  for (let i = 0; i < couponsCount.value; i++) {
+    couponStore.addCoupon(i);
+  }
+
+  const myModal = new bootstrap.Modal("#modalInfo");
+  myModal.show();
 }
 </script>
 
@@ -57,6 +75,7 @@ function calcPrice() {
               type="number"
               placeholder="0"
               min="0"
+              max="100"
               v-model="t.qty"
               @change="calcPrice"
             />
@@ -71,10 +90,45 @@ function calcPrice() {
       </tbody>
     </table>
     <div class="text-end">
-      <button :disabled="totalPrice === 0" class="btn btn-primary">
+      <button
+        @click="bookNow"
+        :disabled="totalPrice === 0"
+        class="btn btn-primary"
+      >
         Pesan Sekarang
       </button>
     </div>
   </div>
   <Footer :in-ticket-booking-page="true" />
+  <div
+    class="modal fade"
+    id="modalInfo"
+    tabindex="-1"
+    aria-labelledby="modalInfoLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalInfoLabel">Berhasil</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          Pemesanan tiket telah berhasil{{
+            couponsCount > 0 ? `, Anda mendapatkan ${couponsCount} kupon` : ""
+          }}, selamat menikmati liburan Anda :&rpar;
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

@@ -24,7 +24,7 @@ export function formatDate(dateVal) {
   return date.toLocaleDateString("id-ID", dateOptions);
 }
 
-export function getCode(plusOne) {
+export function getCode(plusNum) {
   const date = new Date();
   const dateVal1 =
     date.getFullYear().toString() +
@@ -34,6 +34,6 @@ export function getCode(plusOne) {
     date.getHours().toString() +
     date.getMinutes().toString() +
     date.getSeconds().toString();
-  const ms = date.getMilliseconds() + (plusOne ? 1 : 0);
-  return `TIX-SJY-${dateVal1}-${dateVal2 + ms.toString()}`;
+  const ms = date.getMilliseconds() + (plusNum ?? 0);
+  return `SJY-${dateVal1}-${dateVal2 + ms.toString()}`;
 }

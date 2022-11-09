@@ -14,7 +14,7 @@ export const useCouponStore = defineStore("coupon", () => {
       isExchanged: false,
     },
     {
-      code: getCode(true),
+      code: getCode(1),
       expDate: +expDate,
       isExchanged: true,
     },
@@ -27,8 +27,15 @@ export const useCouponStore = defineStore("coupon", () => {
   const lsCoupons = JSON.parse(localStorage.getItem("coupons"));
   const coupons = ref(lsCoupons);
 
-  function add(value) {
-    coupons.value = [...coupons.value, value];
+  function addCoupon(plusNum) {
+    expDate.setTime(+new Date());
+    expDate.setFullYear(expDate.getFullYear() + 1);
+
+    coupons.value.push({
+      code: getCode(plusNum),
+      expDate: +expDate,
+      isExchanged: false,
+    });
     localStorage.setItem("coupons", JSON.stringify(coupons.value));
   }
 
@@ -48,5 +55,5 @@ export const useCouponStore = defineStore("coupon", () => {
     return exchanged;
   }
 
-  return { coupons, add, exchangeAll };
+  return { coupons, addCoupon, exchangeAll };
 });

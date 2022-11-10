@@ -37,17 +37,20 @@ const router = createRouter({
       name: "Hubungi Kami",
       component: () => import("../views/ContactUsView.vue"),
     },
-    ,
     {
       path: "/masuk",
       name: "Masuk",
       component: () => import("../views/LoginView.vue"),
     },
-    ,
     {
       path: "/daftar",
       name: "Daftar",
       component: () => import("../views/RegisterView.vue"),
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "Not Found",
+      component: () => import("../views/NotFoundView.vue"),
     },
   ],
 });

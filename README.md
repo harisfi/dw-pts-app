@@ -1,35 +1,25 @@
-# dw-pts-app
+<p align="center"><img src="./src/assets/images/logo.webp" width="100"></p>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h1 align="center">Website Pantai Teluk Sanjaya 🏖️</h1>
 
-## Recommended IDE Setup
+Repository ini memuat source code website pantai teluk sanjaya yang dibuat dengan menggunakan framework Vue JS.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Instalasi
 
-## Customize configuration
+1. Clone repository
+    ```sh
+    git clone https://github.com/harisfi/dw-pts-app.git
+    ```
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+2. Gunakan package manager [npm](https://npmjs.com/) untuk mengunduh dependency.
+    ```sh
+    npm install
+    ```
 
-## Project Setup
+3. Jalankan server development
+    ```sh
+    npm run dev
+    ```
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

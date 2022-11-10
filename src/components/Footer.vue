@@ -119,7 +119,4 @@ function logout() {
 .link:hover {
   text-decoration: underline;
 }
-.wave-footer {
-  min-height: 300px;
-}
 </style>

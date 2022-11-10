@@ -117,6 +117,9 @@ h1 div:last-child {
   font-weight: 600;
 }
 
+.hero {
+  overflow-x: hidden;
+}
 .img-adv {
   min-height: 200px;
 }
@@ -124,10 +127,10 @@ h1 div:last-child {
   min-height: 800px;
 }
 .wave-hero {
-  min-height: 180px;
+  min-height: 50px;
 }
 .wave-location {
-  min-height: 270px;
+  min-height: 70px;
 }
 .h-5 {
   height: 5rem;

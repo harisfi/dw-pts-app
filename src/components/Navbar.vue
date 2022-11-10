@@ -11,11 +11,13 @@ const expandNavbar = ref(false);
 const showNavbar = ref(true);
 
 router.afterEach((to) => {
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 128);
+  if (!to.hash) {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 128);
+  }
 
-  isHome.value = to.fullPath === "/";
+  isHome.value = to.path === "/";
   expandNavbar.value = false;
 
   toggleNavbar();

@@ -15,13 +15,17 @@ const account = useAccountStore();
 
 function logout() {
   account.logOut();
-  window.location = '/';
+  window.location = "/";
 }
 </script>
 
 <template>
   <footer class="position-relative z-3">
-    <img src="@/assets/images/wave-footer.svg" alt="footer" class="wave-footer" />
+    <img
+      src="@/assets/images/wave-footer.svg"
+      alt="footer"
+      class="wave-footer"
+    />
     <div class="content fw-500 bg-bluesea">
       <div v-if="!inTicketBookingPage" class="container-md text-white mb-5">
         <div class="text-center">
@@ -74,9 +78,7 @@ function logout() {
             <div class="col">
               <div class="h5 mb-3">Akun</div>
               <template v-if="account.loggedIn">
-                <a @click="logout" class="d-block link mb-1">
-                  Keluar
-                </a>
+                <a @click="logout" class="d-block link mb-1">Keluar</a>
               </template>
               <template v-else>
                 <RouterLink to="/daftar" class="d-block link mb-1">
@@ -89,12 +91,22 @@ function logout() {
             </div>
             <div class="col">
               <div class="h5 mb-3">Media Sosial</div>
-              <RouterLink to="/" class="d-block link mb-1">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="d-block link mb-1"
+              >
                 Instagram
-              </RouterLink>
-              <RouterLink to="/" class="d-block link mb-1">
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="d-block link mb-1"
+              >
                 Twitter
-              </RouterLink>
+              </a>
             </div>
           </div>
         </div>

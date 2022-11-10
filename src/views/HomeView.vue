@@ -27,9 +27,9 @@ import adventages from "@/static/adventages.json";
                 <br />
                 Yuk! menangkan liburanmu bersama kami di Pantai Teluk Sanjaya.
               </p>
-              <button class="btn btn-lg btn-primary w-fit shadow">
+              <a href="#kelebihan" class="btn btn-lg btn-primary w-fit shadow">
                 Mulai Jelajahi
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -43,8 +43,8 @@ import adventages from "@/static/adventages.json";
       </div>
       <div class="overlay position-absolute top-0 left-0 h-100 w-100 z-1"></div>
     </section>
-    <section aria-label="keunggulan" class="bg-bluesea">
-      <div class="container-md">
+    <section aria-label="kelebihan" id="kelebihan" class="bg-bluesea">
+      <div class="container-md pt-3">
         <h2 class="text-center text-white py-5">
           <div class="fs-1">Kelebihan</div>
           <div>Pantai Teluk Sanjaya</div>

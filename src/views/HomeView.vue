@@ -9,7 +9,7 @@ import adventages from "@/static/adventages.json";
       <img
         src="@/assets/images/hero-home.webp"
         alt="background"
-        class="w-md-100"
+        class="img-hero w-md-100"
       />
       <div class="position-absolute top-0 left-0 h-100 w-100 z-3">
         <div class="container-md h-100">
@@ -38,7 +38,7 @@ import adventages from "@/static/adventages.json";
         <img
           src="@/assets/images/wave-hero.png"
           alt="wave-hero"
-          class="w-100"
+          class="wave-hero w-100"
         />
       </div>
       <div class="overlay position-absolute top-0 left-0 h-100 w-100 z-1"></div>
@@ -54,7 +54,7 @@ import adventages from "@/static/adventages.json";
         >
           <div v-for="(adv, idx) in adventages" :key="idx" class="mx-4">
             <div class="w-fit mx-auto">
-              <img :src="adv.image" :alt="adv.title" />
+              <img :src="adv.image" :alt="adv.title" class="img-adv" />
             </div>
             <div class="text-center text-white">
               <h4 class="py-2">{{ adv.title }}</h4>
@@ -69,7 +69,7 @@ import adventages from "@/static/adventages.json";
         <img
           src="@/assets/images/wave-location.png"
           alt="wave-location"
-          class="w-100"
+          class="wave-location w-100"
         />
       </div>
       <div class="position-relative container-md z-2">
@@ -117,6 +117,18 @@ h1 div:last-child {
   font-weight: 600;
 }
 
+.img-adv {
+  min-height: 200px;
+}
+.img-hero {
+  min-height: 800px;
+}
+.wave-hero {
+  min-height: 180px;
+}
+.wave-location {
+  min-height: 270px;
+}
 .h-5 {
   height: 5rem;
 }

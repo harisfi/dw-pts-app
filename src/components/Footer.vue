@@ -21,7 +21,7 @@ function logout() {
 
 <template>
   <footer class="position-relative z-3">
-    <img src="@/assets/images/wave-footer.svg" alt="footer" />
+    <img src="@/assets/images/wave-footer.svg" alt="footer" class="wave-footer" />
     <div class="content fw-500 bg-bluesea">
       <div v-if="!inTicketBookingPage" class="container-md text-white mb-5">
         <div class="text-center">
@@ -118,5 +118,8 @@ function logout() {
 }
 .link:hover {
   text-decoration: underline;
+}
+.wave-footer {
+  min-height: 300px;
 }
 </style>
